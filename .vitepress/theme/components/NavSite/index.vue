@@ -19,9 +19,9 @@
     <!-- 分割线 -->
     <div style="border-top: 1px solid var(--vp-c-border); margin: 24px 0;"></div>
 
-    <!-- 高质量周刊与博客 -->
+    <!-- 高质量论坛与博客 -->
     <div style="margin-bottom: 32px;">
-      <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 16px; color: var(--vp-c-text-1);">高质量周刊与博客</h2>
+      <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 16px; color: var(--vp-c-text-1);">高质量论坛与博客</h2>
       <div class="blogs-grid" style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 12px;">
         <a v-for="blog in blogs" :key="blog.name" :href="blog.link" target="_blank" class="nav-card" :style="{ height: blog.height }">
           <div style="display: flex; align-items: center; gap: 12px;">
@@ -62,6 +62,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const tools = ref([
   { name: '豆包', desc: '字节跳动旗下AI助手', link: 'https://www.doubao.com', logo: 'https://notes.fe-mm.com/icons/doubao.png', height: '72px' },
+  { name: 'TRAE', desc: 'AI写代码', link: 'https://www.trae.cn', logo: 'https://favicon.im/www.trae.cn?larger=true', height: '72px' },
   { name: 'Squoosh', desc: '基于浏览器的图片压缩工具', link: 'https://squoosh.app', logo: 'https://squoosh.app/c/icon-demo-logo-326ed9b6.png', height: '72px' },
   { name: 'TinyPNG', desc: '在线图片压缩工具', link: 'https://tinypng.com', logo: 'https://tinypng.com/images/favicon.ico', height: '72px' },
   { name: 'Carbon', desc: '代码图片生成', link: 'https://carbon.now.sh', logo: 'https://carbon.now.sh/favicon.ico', height: '72px' },
@@ -69,29 +70,28 @@ const tools = ref([
   { name: '开发者武器库', desc: '开发者武器库，做开发者最专业最好用的专业工具箱', link: 'https://devtool.tech', logo: 'https://devtool.tech/favicon.ico', height: '72px' },
   { name: '在线工具', desc: '开发人员的工具箱', link: 'https://tool.lu', logo: 'https://tool.lu/favicon.ico', height: '72px' },
   { name: 'Json 中文网', desc: 'JSON 在线解析及格式化验证', link: 'https://www.json.cn', logo: 'https://www.json.cn/favicon.ico', height: '72px' },
-  { name: 'transform', desc: '一个支持多语言的在线转换器', link: 'https://transform.tools', logo: 'https://transform.tools/favicon.ico', height: '72px' },
+  { name: 'transform', desc: '一个支持多语言的在线转换器', link: 'https://transform.tools', logo: 'https://favicon.im/transform.tools?larger=true', height: '72px' },
   { name: 'Excalidraw', desc: '手绘风格流程图', link: 'https://excalidraw.com', logo: 'https://excalidraw.com/favicon.ico', height: '72px' },
   { name: 'ProcessOn', desc: '免费在线流程图思维导图', link: 'https://www.processon.com', logo: 'https://www.processon.com/favicon.ico', height: '72px' },
-  { name: 'Shields.io', desc: '制作简洁、一致、易读的徽章', link: 'https://shields.io', logo: 'https://shields.io/favicon.ico', height: '72px' },
-  { name: '懒人 Excel', desc: 'Excel 函数公式、操作技巧、数据分析、图表模板、VBA、数据透视表教程', link: 'https://www.lanrenexcel.com', logo: 'https://www.lanrenexcel.com/favicon.ico', height: '72px' },
+  { name: 'Shields.io', desc: '制作简洁、一致、易读的徽章', link: 'https://shields.io', logo: 'https://favicon.im/shields.io?larger=true', height: '72px' },
+  { name: '懒人 Excel', desc: 'Excel 教程', link: 'https://www.lanrenexcel.com', logo: 'https://favicon.im/www.lanrenexcel.com?larger=true', height: '72px' },
   { name: 'Favicon', desc: '网页icon提取', link: 'https://favicon.im/zh', logo: 'https://favicon.im/favicon.im?larger=true', height: '72px' },
 ])
 
 const blogs = ref([
   { name: '稀土掘金', desc: '程序员论坛', link: 'https://juejin.cn', logo: 'https://juejin.cn/favicon.ico', height: '72px' },
-  { name: '科技爱好者周刊', desc: '阮一峰的科技爱好者周刊', update: '周五更新', link: 'https://www.ruanyifeng.com/blog/weekly/', logo: 'https://www.ruanyifeng.com/favicon.ico', height: '72px' },
-  { name: '奇舞周刊', desc: '领先前端技术阅读周报周刊（360 集团）', update: '周五更新', link: 'https://weekly.75.team', logo: 'https://weekly.75.team/favicon.ico', height: '72px' },
-  { name: 'MDH Weekly', desc: '云谦的前端周刊', update: '周一更新', link: 'https://mdhweekly.com', logo: 'https://mdhweekly.com/favicon.ico', height: '72px' },
-  { name: '前端食堂技术周刊', desc: '周周新鲜，人工智能前端每周最新资讯', update: '周一更新', link: 'https://hungryturbo.zhubai.love', logo: 'https://zhubai.love/favicon.ico', height: '72px' }
+  { name: 'UG爱好者论坛', desc: 'UG建模与编程',link: 'https://www.ugsnx.com', logo: 'https://favicon.im/www.ugsnx.com?larger=true', height: '72px' },
+  { name: 'SW自学网', desc: 'SW一站式学习',link: 'https://www.swrjzxw.com', logo: 'https://favicon.im/www.solidworks.com?larger=true', height: '72px' },
 ])
 
 const panItems = ref([
   { name: '百度网盘', desc: '百度旗下云存储服务', link: 'https://pan.baidu.com', logo: 'https://favicon.im/pan.baidu.com', height: '72px' },
-  { name: '阿里云盘', desc: '阿里云旗下云存储服务', link: 'https://www.aliyundrive.com', logo: 'https://www.aliyundrive.com/favicon.ico', height: '72px' },
+  { name: '阿里云盘', desc: '阿里云旗下云存储服务', link: 'https://www.aliyundrive.com', logo: 'https://favicon.im/www.alipan.com?larger=true', height: '72px' },
   { name: '夸克网盘', desc: '夸克浏览器旗下云存储服务', link: 'https://pan.quark.cn', logo: 'https://pan.quark.cn/favicon.ico', height: '72px' },
   { name: '天翼云盘', desc: '中国电信旗下云存储服务', link: 'https://cloud.189.cn', logo: 'https://favicon.im/cloud.189.cn', height: '72px' },
   { name: '115网盘', desc: '老牌云存储服务', link: 'https://115.com', logo: 'https://115.com/favicon.ico', height: '72px' },
   { name: '小酷盘', desc: '聚合网盘搜索工具', link: 'https://xiaokupan.com', logo: 'https://xiaokupan.com/favicon.ico', height: '72px' },
+  { name: '3Y论坛', desc: '纯净网盘分享社区', link: 'https://www.3ylt.xyz', logo: 'https://favicon.im/www.3ylt.xyz?larger=true', height: '72px' },
   { name: '文叔叔', desc: '在线文件分享工具', link: 'https://www.wenshushu.cn', logo: 'https://www.wenshushu.cn/favicon.ico', height: '72px' }
 ])
 
