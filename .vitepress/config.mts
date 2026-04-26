@@ -22,6 +22,7 @@ export default defineConfig({
         text: "关于",
         items: [
           { text: "友情链接", link: "/pages/links" },
+          { text: "导航站", link: "/pages/nav" },
           { text: "我的博客", link: "https://bnganblog.github.io" }
         ],
         style: "color: #3b82f6;"
