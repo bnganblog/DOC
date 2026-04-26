@@ -92,6 +92,7 @@ const panItems = ref([
   { name: '115网盘', desc: '老牌云存储服务', link: 'https://115.com', logo: 'https://115.com/favicon.ico', height: '72px' },
   { name: '小酷盘', desc: '聚合网盘搜索工具', link: 'https://xiaokupan.com', logo: 'https://xiaokupan.com/favicon.ico', height: '72px' },
   { name: '3Y论坛', desc: '纯净网盘分享社区', link: 'https://www.3ylt.xyz', logo: 'https://favicon.im/www.3ylt.xyz?larger=true', height: '72px' },
+  { name: '小云搜索', desc: '一站式网盘搜索', link: 'https://dash.yunso.net', logo: 'https://favicon.im/dash.yunso.net?larger=true', height: '72px' },
   { name: '文叔叔', desc: '在线文件分享工具', link: 'https://www.wenshushu.cn', logo: 'https://www.wenshushu.cn/favicon.ico', height: '72px' }
 ])
 
