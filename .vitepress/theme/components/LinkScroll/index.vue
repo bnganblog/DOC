@@ -104,6 +104,7 @@ onUnmounted(() => {
   color: var(--vp-c-text-1);
   margin-bottom: 1rem;
   text-align: center;
+  padding-top: 2rem;
 }
 
 .link-scroll-wrapper {

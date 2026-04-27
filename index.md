@@ -47,6 +47,7 @@ features:
     link: /
 ---
 
+
 <LinkScroll :links="scrollLinks" :speed="40" />
 
 <script setup>
