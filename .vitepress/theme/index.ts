@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme';
 import WLink from './components/WLink/index.vue';
 import NavSite from './components/NavSite/index.vue';
+import LinkScroll from './components/LinkScroll/index.vue';
 import './style.css';
 
 export default {
@@ -8,5 +9,6 @@ export default {
   enhanceApp({ app }) {
     app.component('WLink', WLink);
     app.component('NavSite', NavSite);
+    app.component('LinkScroll', LinkScroll);
   }
 }

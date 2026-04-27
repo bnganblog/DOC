@@ -15,7 +15,8 @@ export default defineConfig({
       {
         text: "机械加工",
         items: [
-          { text: "NXUG12", link: "/pages/MDC/UG12/1" },
+          { text: "UG12三轴编程", link: "/pages/UG/UG12/1" },
+          { text: "UG12多轴编程", link: "/pages/UG/UG12/5-axis" },
         ],
       },
       {
@@ -30,13 +31,26 @@ export default defineConfig({
     ],
 
     sidebar: {
-      '/pages/MDC/': [
+      '/pages/UG/': [
         {
-          text: 'MDC',
+          text: 'UG',
           collapsible: true,
           items: [
-            { text: 'UG12多轴编程', link: '/pages/MDC/UG12/1' },
-            { text: 'UG2512', link: '/pages/MDC/UG2512/1' }
+            { text: 'UG12三轴编程', link: '/pages/UG/UG12/1' },
+            { text: 'UG12多轴编程', link: '/pages/UG/UG12/5-axis' },
+            { text: '测试', link: '/pages/UG/UG2512/1' }
+          ]
+        }
+      ],
+      '/pages/nav': [
+        {
+          text: '导航分类',
+          items: [
+            { text: '常用工具', link: '/pages/nav#常用工具' },
+            { text: '高质量论坛与博客', link: '/pages/nav#高质量论坛与博客' },
+            { text: '网盘资源', link: '/pages/nav#网盘资源' },
+            { text: '软件下载', link: '/pages/nav#软件下载' },
+            { text: '影视资源', link: '/pages/nav#影视资源' }
           ]
         }
       ]

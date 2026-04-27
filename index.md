@@ -47,6 +47,28 @@ features:
     link: /
 ---
 
+<LinkScroll :links="scrollLinks" :speed="40" />
+
+<script setup>
+import { computed } from 'vue'
+import { linksData } from './.vitepress/theme/components/WLink/linksData'
+
+// 从共享数据中提取所有友链，用于滚动显示
+const scrollLinks = computed(() => {
+  const links = []
+  linksData.forEach(group => {
+    group.list.forEach(item => {
+      links.push({
+        name: item.name,
+        url: item.link,
+        logo: item.avatar
+      })
+    })
+  })
+  return links
+})
+</script>
+
 <style>
 /*爱的魔力转圈圈*/
 .m-home-layout .image-src:hover {
