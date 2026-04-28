@@ -9,6 +9,7 @@ export default defineConfig({
   title: "归档",
   description: "A VitePress Site",
   lang: 'zh-CN',
+  cleanUrls: true,
   themeConfig: {
     outlineTitle: '本页目录',
     returnToTopLabel: '返回顶部',
