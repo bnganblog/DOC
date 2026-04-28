@@ -191,7 +191,7 @@ const movieItems = ref([
 ])
 
 const modelItems = ref([
-  { name: 'GrabCAD', desc: '全球最大CAD模型分享社区', link: 'https://grabcad.com', logo: 'https://favicon.im/grabcad.com?larger=true', height: '72px' },
+  { name: 'MakerWorld', desc: '国内3D模型分享社区', link: 'https://makerworld.com.cn', logo: 'https://favicon.im/makerworld.com.cn/?larger=true', height: '72px' },
   { name: 'Thingiverse', desc: '3D打印模型分享平台', link: 'https://www.thingiverse.com', logo: 'https://favicon.im/www.thingiverse.com?larger=true', height: '72px' },
   { name: 'Sketchfab', desc: '3D模型在线展示与分享', link: 'https://sketchfab.com', logo: 'https://favicon.im/sketchfab.com?larger=true', height: '72px' },
   { name: '3D客', desc: '国内3D模型分享平台', link: 'https://www.3dker.cn', logo: 'https://favicon.im/www.3dker.cn?larger=true', height: '72px' },
