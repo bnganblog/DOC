@@ -6,6 +6,7 @@ export default {
       collapsed: true,
       items: [
         { text: 'UG12基础功能介绍', link: '/pages/UG/UG12/basic-intro' },
+        { text: '切削模式选择', link: '/pages/UG/UG12/CuttingMode' },
       ]
     },
     {
