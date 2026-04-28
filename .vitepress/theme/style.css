@@ -1,3 +1,40 @@
 .nav-link[href*="关于"] {
   color: #f6bb3b !important;
 }
+
+/* 全局主题切换动画 - 所有颜色属性统一过渡 */
+html,
+html *,
+html *::before,
+html *::after {
+  transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              fill 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              stroke 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 排除交互组件的过渡，避免延迟感 */
+html .VPNavBarMenuGroup .menu,
+html .VPFlyout .menu,
+html .VPMenu,
+html .VPLocalNav,
+html .VPSidebar,
+html .VPSidebarItem .items,
+html .VPDocOutlineItem .items {
+  transition: none !important;
+}
+
+/* 按钮和交互元素保持快速响应 */
+html button,
+html a,
+html .VPButton,
+html .VPLink {
+  transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.2s ease !important;
+}

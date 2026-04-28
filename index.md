@@ -9,12 +9,13 @@ hero:
   image:
     src: /logo.png
     alt: 浩浩
-actions:
-    - text: mmPlayer
-      link: https://netease-music.fe-mm.com
-    - text: 测试页
-      link: /test
-      theme: alt
+  actions:
+    - theme: brand
+      text: 快速开始
+      link: /pages/UG/UG12/1.html
+    - theme: alt
+      text: 快速导航
+      link: /pages/nav.html
 features:
   - icon: ⚙
     title: 前端物语

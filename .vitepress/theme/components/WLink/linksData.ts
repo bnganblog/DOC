@@ -24,6 +24,12 @@ export const linksData: LinkList[] = [
         link: 'https://blog.anheyu.com/',
         avatar: 'https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg',
         descr: '生活明朗，万物可爱'
+      },
+      {
+        name: '茂茂物语',
+        link: 'https://notes.fe-mm.com',
+        avatar: 'https://notes.fe-mm.com/logo.png',
+        descr: '茂茂的成长之路，包含前端常用知识、源码阅读笔记、各种奇淫技巧、日常提效工具等'
       }
     ]
   },

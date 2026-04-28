@@ -26,16 +26,14 @@ import { linksData } from './linksData'
 const updateGridLayout = () => {
   const containers = document.querySelectorAll('.linkContainer');
   if (!containers.length) return;
-  
+
   const width = window.innerWidth;
   let columns = 1;
-  
-  if (width >= 1536) columns = 6; // 2xl
-  else if (width >= 1280) columns = 5; // xl
-  else if (width >= 1024) columns = 4; // lg
-  else if (width >= 768) columns = 3; // md
-  else if (width >= 640) columns = 2; // sm
-  
+
+  if (width >= 1024) columns = 4; // lg and above: 4 columns
+  else if (width >= 768) columns = 3; // md: 3 columns
+  else if (width >= 640) columns = 2; // sm: 2 columns
+
   containers.forEach(container => {
     container.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
   });

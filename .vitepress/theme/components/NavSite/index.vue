@@ -65,8 +65,6 @@
     <!-- 分割线 -->
     <div style="border-top: 1px solid var(--vp-c-border); margin: 24px 0;"></div>
 
-    <!-- 分割线 -->
-    <div style="border-top: 1px solid var(--vp-c-border); margin: 24px 0;"></div>
 
     <!-- 软件下载 -->
     <div id="软件下载" style="margin-bottom: 32px;">
