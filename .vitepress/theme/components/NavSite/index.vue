@@ -104,6 +104,27 @@
         </a>
       </div>
     </div>
+
+    <!-- 分割线 -->
+    <div style="border-top: 1px solid var(--vp-c-border); margin: 24px 0;"></div>
+
+    <!-- 模型分享站 -->
+    <div id="模型分享站" style="margin-bottom: 32px;">
+      <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 16px; color: var(--vp-c-text-1);">模型分享站</h2>
+      <div class="model-grid" style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 12px;">
+        <a v-for="item in modelItems" :key="item.name" :href="item.link" target="_blank" class="nav-card" :style="{ height: item.height }">
+          <div class="card-content">
+            <div class="icon-wrapper">
+              <img :src="item.logo" :alt="item.name" class="nav-icon">
+            </div>
+            <div class="text-content">
+              <h3 class="nav-title">{{ item.name }}</h3>
+              <p class="nav-desc">{{ item.desc }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -169,6 +190,14 @@ const movieItems = ref([
   { name: '低端影视', desc: '影视在线观看', link: 'https://ddys.art', logo: 'https://favicon.im/ddys.art?larger=true', height: '72px' },
 ])
 
+const modelItems = ref([
+  { name: 'GrabCAD', desc: '全球最大CAD模型分享社区', link: 'https://grabcad.com', logo: 'https://favicon.im/grabcad.com?larger=true', height: '72px' },
+  { name: 'Thingiverse', desc: '3D打印模型分享平台', link: 'https://www.thingiverse.com', logo: 'https://favicon.im/www.thingiverse.com?larger=true', height: '72px' },
+  { name: 'Sketchfab', desc: '3D模型在线展示与分享', link: 'https://sketchfab.com', logo: 'https://favicon.im/sketchfab.com?larger=true', height: '72px' },
+  { name: '3D客', desc: '国内3D模型分享平台', link: 'https://www.3dker.cn', logo: 'https://favicon.im/www.3dker.cn?larger=true', height: '72px' },
+  { name: 'CG模型网', desc: 'CG模型资源下载', link: 'https://www.cgmodel.cn', logo: 'https://favicon.im/www.cgmodel.cn?larger=true', height: '72px' },
+])
+
 // 动态调整网格布局
 const updateGridLayout = () => {
   const toolContainers = document.querySelectorAll('.tools-grid');
@@ -176,6 +205,7 @@ const updateGridLayout = () => {
   const panContainers = document.querySelectorAll('.pan-grid');
   const softwareContainers = document.querySelectorAll('.software-grid');
   const movieContainers = document.querySelectorAll('.movie-grid');
+  const modelContainers = document.querySelectorAll('.model-grid');
 
   const width = window.innerWidth;
   let columns = 1;
@@ -203,6 +233,10 @@ const updateGridLayout = () => {
   });
 
   movieContainers.forEach(container => {
+    container.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+  });
+
+  modelContainers.forEach(container => {
     container.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
   });
 }

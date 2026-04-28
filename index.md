@@ -8,7 +8,7 @@ hero:
   tagline: DIY爱好者天堂，一站式学习从设计到加工成品
   image:
     src: /logo.png
-    alt: 浩浩
+    alt: /
   actions:
     - theme: brand
       text: 快速开始
@@ -71,20 +71,26 @@ const scrollLinks = computed(() => {
 })
 </script>
 
+
 <style>
-/*爱的魔力转圈圈*/
-.m-home-layout .image-src:hover {
-  transform: translate(-50%, -50%) rotate(666turn);
-  transition: transform 59s 1s cubic-bezier(0.3, 0, 0.8, 1);
+:root {
+  /* 文字渐变 */
+  --vp-home-hero-name-color: transparent !important;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #9b142a, #41d1ff) !important;
+
+  /* 静态底色（动画会覆盖它） */
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #9b142a, #41d1ff) !important;
+  --vp-home-hero-image-filter: blur(60px) !important;
 }
 
-.m-home-layout .details small {
-  opacity: 0.8;
+/* 动态变色动画 */
+.VPHomeHero .image::before {
+  animation: bgGradient 2s infinite linear !important;
+  background-size: 300% 300% !important;
 }
 
-.m-home-layout .bottom-small {
-  display: block;
-  margin-top: 2em;
-  text-align: right;
+/* 深色模式兼容 */
+.dark {
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #ff7b9c, #72d2ff) !important;
 }
 </style>

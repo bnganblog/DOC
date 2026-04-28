@@ -1,8 +1,6 @@
 import { defineConfig } from 'vitepress';
-
-import { generateSidebar } from "vitepress-sidebar";
-
-// https://vitepress.dev/reference/site-config
+import nav from './nav';
+import sidebar from './sidebar';
 
 export default defineConfig({
   base: '/DOC/',
@@ -10,7 +8,20 @@ export default defineConfig({
   description: "A VitePress Site",
   lang: 'zh-CN',
   cleanUrls: true,
+
+  head: [
+    ['meta', { name: 'referrer', content: 'no-referrer' }]
+  ],
+
+  markdown: {
+    image: {
+      lazyLoading: false
+    }
+  },
+
   themeConfig: {
+    logo: '/logo.png',
+
     outlineTitle: '本页目录',
     returnToTopLabel: '返回顶部',
     sidebarMenuLabel: '菜单',
@@ -18,57 +29,46 @@ export default defineConfig({
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
     skipToContentLabel: '跳转到内容',
+    
     docFooter: {
       prev: '上一页',
       next: '下一页'
     },
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: '主页', link: '/' },
-      {
-        text: "机械加工",
-        items: [
-          { text: "UG12三轴编程", link: "/pages/UG/UG12/1" },
-          { text: "UG12多轴编程", link: "/pages/UG/UG12/5-axis" },
-        ],
-      },
-      {
-        text: "关于",
-        items: [
-          { text: "友情链接", link: "/pages/links" },
-          { text: "导航站", link: "/pages/nav" },
-          { text: "我的博客", link: "https://bnganblog.github.io" }
-        ],
-        style: "color: #3b82f6;"
+    
+    nav,
+    sidebar,
+    
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: '搜索',
+                buttonAriaLabel: '搜索'
+              },
+              modal: {
+                displayDetails: '显示详细列表',
+                resetButtonTitle: '重置搜索',
+                backButtonTitle: '关闭搜索',
+                noResultsText: '没有结果',
+                footer: {
+                  selectText: '选择',
+                  selectKeyAriaLabel: '输入',
+                  navigateText: '导航',
+                  navigateUpKeyAriaLabel: '上箭头',
+                  navigateDownKeyAriaLabel: '下箭头',
+                  closeText: '关闭',
+                  closeKeyAriaLabel: 'Esc'
+                }
+              }
+            }
+          }
+        }
       }
-    ],
-
-    sidebar: {
-      '/pages/UG/': [
-        {
-          text: 'UG',
-          collapsible: true,
-          items: [
-            { text: 'UG12三轴编程', link: '/pages/UG/UG12/1' },
-            { text: 'UG12多轴编程', link: '/pages/UG/UG12/5-axis' },
-            { text: '测试', link: '/pages/UG/UG2512/1' }
-          ]
-        }
-      ],
-      '/pages/nav': [
-        {
-          text: '导航分类',
-          items: [
-            { text: '常用工具', link: '/pages/nav#常用工具' },
-            { text: '高质量论坛与博客', link: '/pages/nav#高质量论坛与博客' },
-            { text: '网盘资源', link: '/pages/nav#网盘资源' },
-            { text: '软件下载', link: '/pages/nav#软件下载' },
-            { text: '影视资源', link: '/pages/nav#影视资源' }
-          ]
-        }
-      ]
     },
-
+    
     socialLinks: [
       { icon: 'github', link: 'https://github.com/bnganblog' }
     ]
