@@ -17,8 +17,8 @@ export default [
   {
     text: "机械建模",
     items: [
-      { text: "UG建模", link: "/" },
-      { text: "SW建模", link: "/" },
+      { text: "UG建模", link: "/pages/UG/UG12/basic-intro" },
+      { text: "SW建模", link: "/pages/SW/basic-intro" },
     ],
   },
   {

@@ -1,6 +1,14 @@
 export default {
   '/pages/UG/': [
     {
+      text: '基础教程',
+      collapsible: true,
+      collapsed: true,
+      items: [
+        { text: 'UG12基础功能介绍', link: '/pages/UG/UG12/basic-intro' },
+      ]
+    },
+    {
       text: '三轴编程',
       collapsible: true,
       collapsed: true,
@@ -22,6 +30,16 @@ export default {
       collapsed: true,
       items: [
         { text: '测试文章', link: '/pages/UG/test/1' }
+      ]
+    }
+  ],
+  '/pages/SW/': [
+    {
+      text: '基础教程',
+      collapsible: true,
+      collapsed: true,
+      items: [
+        { text: 'SW基础功能介绍', link: '/pages/SW/basic-intro' },
       ]
     }
   ],
