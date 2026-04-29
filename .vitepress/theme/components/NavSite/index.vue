@@ -147,6 +147,9 @@ const tools = ref([
   { name: 'Shields.io', desc: '制作简洁、一致、易读的徽章', link: 'https://shields.io', logo: 'https://favicon.im/shields.io?larger=true', height: '72px' },
   { name: '懒人 Excel', desc: 'Excel 教程', link: 'https://www.lanrenexcel.com', logo: 'https://favicon.im/www.lanrenexcel.com?larger=true', height: '72px' },
   { name: 'Favicon', desc: '网页icon提取', link: 'https://favicon.im/zh', logo: 'https://favicon.im/favicon.im?larger=true', height: '72px' },
+  { name: 'vectorizer', desc: '转矢量图工具', link: 'https://vectorizer.com/', logo: 'https://favicon.im/vectorizer.com?larger=true', height: '72px' },
+  { name: 'iloveimg', desc: '免费提升图片质量工具', link: 'https://www.iloveimg.com/', logo: 'https://favicon.im/www.iloveimg.com?larger=true', height: '72px' },
+  { name: 'ipskk', desc: '本机IP查询工具', link: 'https://ip.skk.moe/', logo: 'https://favicon.im/ip.skk.moe?larger=true', height: '72px' },
 ])
 
 const blogs = ref([
