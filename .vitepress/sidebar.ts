@@ -35,13 +35,13 @@ export default {
       ]
     }
   ],
-  '/pages/SW/': [
+  '/pages/model/': [
     {
       text: '基础教程',
       collapsible: true,
       collapsed: true,
       items: [
-        { text: 'SW基础功能介绍', link: '/pages/SW/basic-intro' },
+        { text: 'SW基础功能介绍', link: '/pages/model/basic-intro' },
       ]
     }
   ],
