@@ -3,7 +3,7 @@ import nav from './nav';
 import sidebar from './sidebar';
 
 export default defineConfig({
-  base: '/',
+  base: 'https://cdn.jsdelivr.net/gh/bnganblog/DOC@main/.vitepress/dist/',
   title: "归档",
   description: "A VitePress Site",
   lang: 'zh-CN',
