@@ -8,6 +8,12 @@ export default [
     ],
   },
   {
+    text: "小发明",
+    items: [
+      { text: "短视频去水印", link: 'https://analysis.hao006.xyz' },
+    ],
+  },
+  {
     text: "机械加工",
     items: [
       { text: "UG12三轴编程", link: "/pages/UG/UG12/1" },
